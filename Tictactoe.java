@@ -3,19 +3,19 @@ import java.util.Scanner;
 
 public class Tictactoe {
 	
-
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		Random rand=new Random();
 		
-		char[][] gameBoard= {{' ','|',' ','|',' '},
-				             {'-','+','-','+','-' },
-				             {' ','|',' ','|',' '},
-				             {'-','+','-','+','-' },
-				             {' ','|',' ','|',' '} };
+		char[][] gameBoard= { {' ','|',' ','|',' '},
+				      {'-','+','-','+','-' },
+				      {' ','|',' ','|',' '},
+				      {'-','+','-','+','-' },
+				      {' ','|',' ','|',' '} };
 		
 		printGameBoard(gameBoard);
 		String winner="";
+		
 		while(true) {
 			System.out.println("enter the place(1-9):");
 			int player_pos=sc.nextInt();
@@ -63,21 +63,19 @@ public class Tictactoe {
 			
 		}
 		
-		
-		
 	}
- //print game board
+	
+  //print game board
 	public static void printGameBoard(char[][] a) {
 		for (char[] i : a) {
 			for(char c:i) {
 				System.out.print(c+" ");
 			}
-			System.out.println();
-			
+			System.out.println();	
 		}
-	}
+	 }
 	
-//place piece
+ //place piece
     public static void placepiece(char[][] gameBoard,int pos,String usr) {
     	char symbol=' ';
     	if(usr.equals("player")) {
@@ -105,18 +103,19 @@ public class Tictactoe {
 		case 6:
 			gameBoard[2][4]=symbol;
 			break;
-	    case 7:
-		   gameBoard[4][0]=symbol;
-		   break;
-	    case 8:
-		   gameBoard[4][2]=symbol;
-		   break;
-	    case 9:
-	       gameBoard[4][4]=symbol;
-	       break;
+	        case 7:
+		       gameBoard[4][0]=symbol;
+		       break;
+	        case 8:
+		       gameBoard[4][2]=symbol;
+		       break;
+	        case 9:
+	              gameBoard[4][4]=symbol;
+	              break;
 	  }
     }
-  //check the place is empty	
+	
+    //check the place is empty	
     	public static boolean isValid (char board[][],int pos )  {
     		switch(pos) {
     		case 1:
@@ -136,21 +135,21 @@ public class Tictactoe {
     		case 6:
     			return (board[2][4]==' ');
     			
-    	    case 7:
-    		 return (board[4][0]==' ');
+    	        case 7:
+    		       return (board[4][0]==' ');
     		
-    	    case 8:
-    		 return ( board[4][2]==' ');
+    	        case 8:
+    		       return ( board[4][2]==' ');
     		 
-    	    case 9:
-    	      return (board[4][4]==' ');
-    	    default:
-    	    	return true;
+    	        case 9:
+    	               return (board[4][4]==' ');
+    	        default:
+    	    	    return true;
     	    
     		}
     	}
  
-        //game over
+        //check game over
     	public static boolean isGameOver(char[][] b) {
     	   int c=0;
     	    for(int i=0;i<b.length;i++) {
@@ -158,11 +157,11 @@ public class Tictactoe {
     	    		if(b[i][j]==' ') {
     	    			return false;
     	    		}
-    	    	 
     	    	}
     	    }
     	    	return true;
     	}
+	
     	//check winner
     	public static boolean checkwinner(char[][] board,char symbol) {
     		if ((board[0][0] == symbol && board [0][2] == symbol && board [0][4] == symbol) ||
@@ -188,11 +187,6 @@ public class Tictactoe {
     			return false;
     		}  		
     	}
-  
-    	
-    	
-    	
-    	
 }
 
     
