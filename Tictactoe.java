@@ -1,12 +1,35 @@
+/*
+gameBoard is a 5X5 2D character array full of hyphen [ - ], vertical bars [ | ], plus [+] and spaces [' ']
+    0 1 2 3 4
+0   1 | 2 | 3
+1   _ + _ + _
+2   4 | 5 | 6
+3   _ + _ + _
+4   7 | 8 | 9
+
+   indices where piece 'X' or 'O' can be placed
+         [0][0] =1, [0][2]=2 , [0][4]=3
+         [2][0] =4 , [2][2]=5 , [2][4]=6
+         [4][0]= 7 , [2][2]=8 , [2][4]=9
+	 
+         
+*/
+
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class Tictactoe {
-	
+	//main function
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		Random rand=new Random();
-		
+		/*5X5 2D character array 
+		  |   | 
+                _ + _ + _
+                  |   | 
+                _ + _ + _
+                  |   |     */
 		char[][] gameBoard= { {' ','|',' ','|',' '},
 				      {'-','+','-','+','-' },
 				      {' ','|',' ','|',' '},
@@ -52,6 +75,7 @@ public class Tictactoe {
 			printGameBoard(gameBoard);
 			
 		}
+		
 		//print the game result
 		printGameBoard(gameBoard);
 		System.out.println("game over");
