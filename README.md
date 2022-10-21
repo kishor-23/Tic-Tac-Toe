@@ -12,7 +12,14 @@ Tic Tac Toe is a classic programming problem. It can teach  about:
 </ul>  
 
 <h3>Game screen shots<h3>
-<img  src="Screenshot (22).png"  >
+<img  src="Screenshot (16).png">
+</br>
+<img src="Screenshot (19).png">
+</br>
+<img  src="Screenshot (22).png">
+</br>
+
+
 
 
 
