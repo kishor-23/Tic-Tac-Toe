@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
-
+<img  src="photo6240091893857891364.jpg" width="128" height="128" >
 Tic Tac Toe is a classic programming problem. It can teach  about:
 <ul>
   <li>Arrays</li>
@@ -10,6 +10,11 @@ Tic Tac Toe is a classic programming problem. It can teach  about:
   <li>Variables</li>
   <li>Data Structures</li>
 </ul>  
+
+<h3>Game screen shots<h3>
+<img  src="Screenshot (22).png"  >
+
+
 
 
 
